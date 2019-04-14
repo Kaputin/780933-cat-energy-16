@@ -1,12 +1,32 @@
 .main-nav {
-  margin: 0px;
+  width: 320px;
+  margin: 0px auto;
   padding: 0px;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: @darkgrey-fontcolor;
+
+  font-family: @primaty-font;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+  color: @darkgrey-fontcolor;
   text-transform: uppercase;
   /* Временно для обводски сеточных блоков*/
   border: 5px solid lightblue;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 440px;
+    margin-left: auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 50%;
+    margin-left: auto;
+  }
 }

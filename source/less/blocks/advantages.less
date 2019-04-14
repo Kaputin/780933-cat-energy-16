@@ -1,23 +1,63 @@
 .advantages {
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
 
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @primaty-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @grey-fontcolor;
   /* Временно для обводки сеточных блоков*/
   border: 5px solid brown;
-
 }
+
 .advantages__title {
-  color: @darkgrey-fontcolor;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
+  color: @darkgrey-fontcolor;
 }
 
 .advantages__list {
+  margin-left: 0px;
+  padding: 0px;
+
   list-style: none;
+}
+
+.advantages__description {
+  font-family: @secondary-font;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    display: flex;
+    width: 708px;
+  }
+  
+  .advantages__list {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    width: 322px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: 1220px;
+  }
+
+  .advantages__item {
+    width: 245px;
+    margin-right:80px;
+  }
+
+  .advantages__item:last-child {
+    margin-right: 0px;
+  }
 }
