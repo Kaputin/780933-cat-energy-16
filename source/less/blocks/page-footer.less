@@ -1,12 +1,11 @@
 .page-footer {
-
-  width: 320px;
   display: flex;
   flex-direction: column;
+  width: 320px;
   margin: 0 auto;
   padding: 0px;
 
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @secondary-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -14,7 +13,29 @@
   text-align: center;
 
   background-color: @grey-background-color;
-
   /* Временно для обводки сеточных блоков*/
-  border: 5px solid blue;
+  outline: 5px solid blue;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+  }
+
+  .page-footer__wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    margin:0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+  }
+  .page-footer__wrapper{
+    width: 1220px;
+  }
 }

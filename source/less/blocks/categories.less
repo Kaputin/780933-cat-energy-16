@@ -1,19 +1,23 @@
 .categories {
   margin: 0px auto;
   padding: 0px;
-  font-family: "Oswald", "Arial", sans-serif;
+
+  font-family: @primaty-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @grey-fontcolor;
+
   background-color: @white-background-color;
   /* Временно для обводки сеточных блоков*/
-  border: 5px solid pink;
+  outline: 5px solid pink;
 }
 
 .categories__list {
-  list-style: none;
+  margin:0px;
+  padding:0px;
 
+  list-style: none;
 }
 
 .categories__item {
@@ -21,9 +25,44 @@
 }
 
 .categories__title {
-  color: @darkgrey-fontcolor;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+  color: @darkgrey-fontcolor;
   text-transform: uppercase;
+}
+
+.categories__description {
+  font-family: @secondary-font;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    display: flex;
+    width: 708px;
+    text-align: left;
+  }
+
+  .categories__list{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: 1220px;
+  }
+
+  .categories__list{
+    flex-direction: row;
+  }
+
+  .categories__item {
+    width: 570px;
+  }
+
+  .categories__item:first-child {
+    margin-right: 80px;
+  }
 }

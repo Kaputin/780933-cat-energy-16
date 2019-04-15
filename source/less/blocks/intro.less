@@ -1,33 +1,53 @@
 .intro {
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
+  width: 320px;
   height: 480px;
-  text-align: center;
-  font-family: "Oswald", "Arial", sans-serif;
+
+  font-family: @primaty-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  text-align: center;
   color: @white-fontcolor;
 
   background-color: @green-background;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-
   /* Временно для обводски сеточных блоков*/
-  border: 5px solid gray;
+  outline: 5px solid gray;
 }
+
 .intro__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
 }
+
 .intro__slogan {
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
 }
+
 .intro__image {
   background-color: @white-background-color;
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    width: 708px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    width: 1220px;
+  }
 }

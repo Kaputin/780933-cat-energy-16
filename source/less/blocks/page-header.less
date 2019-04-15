@@ -1,23 +1,54 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   margin: 0px auto;
 
-  display: flex;
-  flex-direction: column;
-
-  font-family: "Oswald", "Arial", sans-serif;
-  color: @darkgrey-fontcolor;
+  font-family: @primaty-font;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+  color: @darkgrey-fontcolor;
   text-transform: uppercase;
-
   /* Временно для обводки сеточных блоков*/
-  border: 5px solid yellow;
+  outline: 5px solid yellow;
 }
 
 .page-header__logo {
   height: 65px;
   /* Временно для обводки сеточных блоков*/
   border: 5px solid black;
+}
+
+.page-header__logo img {
+  width: 226px;
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    width: @tablet-width;
+  }
+
+  .page-header__logo {
+    margin-right: 90px;
+  }
+
+  .page-header__logo img {
+    display: block;
+    width: 226px;
+    height: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+  }
+
+  .page-header__logo {
+    width:50%;
+    margin-right: 0px;
+  }
 }
