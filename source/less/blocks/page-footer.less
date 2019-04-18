@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 320px;
   margin: 0 auto;
+  margin-top: 10px;
   padding: 0px;
 
   font-family: @secondary-font;
@@ -13,9 +14,28 @@
   text-align: center;
 
   background-color: @grey-background-color;
-  /* Временно для обводки сеточных блоков*/
-  outline: 5px solid blue;
 }
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+  width:280px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 39px;
+  padding-bottom: 31px;
+
+  border-bottom: 1px solid grey;
+}
+
+.page-footer__logo-image {
+  width:128px;
+  heigth: 24px;
+  .st0 {
+    fill: #111111;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .page-footer {
@@ -27,7 +47,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 708px;
-    margin:0 auto;
+    margin:0px auto;
+    align-items: center;
+  }
+  .page-footer__logo {
+    justify-content: flex-start;
+    margin: 0px;
+    width:162px;
+    border:none;
   }
 }
 

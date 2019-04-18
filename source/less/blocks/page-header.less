@@ -1,6 +1,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
+
   width: 320px;
   margin: 0px auto;
 
@@ -10,35 +11,42 @@
   font-weight: 500;
   color: @darkgrey-fontcolor;
   text-transform: uppercase;
-  /* Временно для обводки сеточных блоков*/
-  outline: 5px solid yellow;
+  background-color: @white-background-color;
 }
 
 .page-header__logo {
+  display: flex;
+  align-items: center;
+
   height: 65px;
-  /* Временно для обводки сеточных блоков*/
-  border: 5px solid black;
+  padding-left: 20px;
+
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.page-header__logo img {
-  width: 226px;
-  height: 65px;
+.page-header__logo-image {
+  width: 193px;
+  height: 38px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
+
     width: @tablet-width;
   }
 
   .page-header__logo {
-    margin-right: 90px;
+    margin-left: 30px;
+    margin-right:96px;
+    padding: 0px;
+
+    border: none;
   }
 
-  .page-header__logo img {
-    display: block;
-    width: 226px;
-    height: 65px;
+  .page-header__logo-image {
+    width: 173px;
+    height: 58px;
   }
 }
 
@@ -49,6 +57,13 @@
 
   .page-header__logo {
     width:50%;
+    margin:0px;
     margin-right: 0px;
+    padding-top:54px;
+  }
+  .page-header__logo-image {
+    margin-left: 40px;
+    width: 202px;
+    height: 59px;
   }
 }

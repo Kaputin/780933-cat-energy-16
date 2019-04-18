@@ -1,4 +1,5 @@
 .advantages {
+  width: 280px;
   margin: 0px auto;
   padding: 0px;
 
@@ -7,11 +8,13 @@
   line-height: 18px;
   font-weight: 400;
   color: @grey-fontcolor;
-  /* Временно для обводки сеточных блоков*/
-  outline: 5px solid brown;
 }
 
 .advantages__title {
+  margin: 0px;
+  margin-top: 32px;
+  padding: 0px;
+
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -19,31 +22,135 @@
 }
 
 .advantages__list {
-  margin-left: 0px;
+  margin:0px;
+  margin-left: 80px;
+  margin-top: 41px;
   padding: 0px;
 
   list-style: none;
 }
 
-.advantages__description {
+.advantages__item {
+  position: relative;
+
+  margin-top: 26px;
+
   font-family: @secondary-font;
+}
+
+.advantages__description {
+  margin: 0px;
+  padding: 0px;
+}
+
+.advantages__item::after {
+  content: '';
+
+  top:0px;
+  left: -80px;
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: @green-background;
+}
+.advantages__item--benefit::after {
+  background-image: url(../../img/advantage-leaf@1x.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.advantages__item--release::after {
+  background-image: url(../../img/advantage-powder@1x.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.advantages__item--replacement::after {
+  background-image: url(../../img/advantage-dining@1x.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.advantages__item--changes::after {
+  background-image: url(../../img/advantage-clock@1x.png);
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
     display: flex;
+
     width: 708px;
   }
+
+  .advantages__title {
+    margin-top: 51px;
+
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: @darkgrey-fontcolor;
+    }
 
   .advantages__list {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-left: 0px;
+    margin-top: 32px;
   }
 
   .advantages__item {
-    width: 322px;
+    width: 245px;
+    height:169px;
+
+    margin-top: 31px;
+    padding-top: 117px;
+    padding-right: 68px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .advantages__item::after {
+    top:0px;
+    left: 0px;
+
+    width: 80px;
+    height: 80px;
+  }
+
+  .advantages__item::before {
+    content: '';
+
+    top:-38px;
+    left: 124px;
+    position: absolute;
+
+    width: 144px;
+    height: 305px;
+
+    font-family: @primaty-font;
+    font-size: 281px;
+    line-height: 281px;
+    font-weight: 400;
+    color: @grey-background-color;
+
+    opacity: 0.1;
+  }
+  .advantages__item--benefit::before {
+    content: '1';
+  }
+  .advantages__item--release::before {
+    content: '2';
+  }
+  .advantages__item--replacement::before {
+    content: '3';
+  }
+  .advantages__item--changes::before {
+    content: '4';
   }
 }
 
@@ -51,10 +158,21 @@
   .advantages {
     width: 1220px;
   }
+  .advantages__title {
+    margin-top: 79px;
+  }
+  .advantages__list {
+    margin-left: 0px;
+    margin-top: 63px;
+  }
 
   .advantages__item {
     width: 245px;
+    height: 113px;
+    margin-top: 0px;
     margin-right:80px;
+    padding: 0px;
+    padding-top: 117px;
   }
 
   .advantages__item:last-child {

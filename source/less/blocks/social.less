@@ -13,7 +13,58 @@
 .social__list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 125px;
+  margin: 0 20px;
+  margin-left: 93px;
+  padding: 20px 0px;
 
   list-style: none;
+}
+
+.social__link--vkontakte {
+  width: 22px;
+  height:12px;
+  fill: #444444;
+}
+
+.social__link--instagram {
+  width: 16px;
+  height:16px;
+  .st0 {
+  fill: #444444;
+  }
+}
+
+.social__link--facebook {
+  width: 10px;
+  height:19px;
+  fill: #444444;
+}
+
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 326px;
+  }
+
+  .social__link--vkontakte {
+    width: 30px;
+    height:16px;
+  }
+
+  .social__link--instagram {
+    width: 23px;
+    height:23px;
+  }
+
+
+  .social__link--facebook{
+    width: 14px;
+    height: 28px;
+  }
+
 }
