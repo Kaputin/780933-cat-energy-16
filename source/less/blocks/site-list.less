@@ -9,23 +9,117 @@
   color: @darkgrey-fontcolor;
   text-transform: uppercase;
   text-align: center;
-
   list-style: none;
-  /* Временно для обводски сеточных блоков*/
-  outline: 5px solid red;
+}
+
+
+.site-list a {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-family: @primaty-font;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: @darkgrey-fontcolor;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid @grey-border-color;
+}
+
+.site-list a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .site-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top:20px;
+    .site-list {
+      margin-right: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 439px;
+    }
+    .site-list__item {
+      margin-right: 35px;
+
+      &:last-child {
+        margin-right: 0;
+    }
+
+      &--active {
+        position: relative;
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          right: 0;
+          bottom: 13px;
+          left: 0;
+
+          height: 2px;
+
+          background: @bg-site-active;
+      }
+    }
+  }
+
+  .site-list__item a {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    background: none;
+    border: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
     width: 480px;
+    margin-right: 40px;
+    margin-left: auto;
+  }
+  
+  .site-list__item {
+    margin-right: 35px;
+    padding-top:50px;
+
+      &:last-child {
+        margin-right: 0;
+    }
+
+      &--active {
+        position: relative;
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          right: 0;
+          bottom: 13px;
+          left: 0;
+
+          height: 2px;
+      }
+    }
+  }
+
+  .site-list__item_index::after {
+    background: @white-background-color;
+  }
+
+  .site-list__item a {
+    font-size: 20px;
+  }
+
+  .site-list__item_index a {
+    color: @white-fontcolor;
   }
 }

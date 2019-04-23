@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  width: 280px;
+  padding-top:12px;
+  padding-bottom: 10px;
+
+  font-family: @primaty-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @white-fontcolor;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: @green-background;
+
+  border: none;
+}
+
+.button:hover {
+  background-color: @bt-hvr-color;
+}
+
+.button:active {
+  opacity: 0.3;
+  background-color: @bt-hvr-color;
+}
+
+
+@media (min-width: @tablet-width) {
+  .button {
+    width:245px;
+    padding-top:17px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
