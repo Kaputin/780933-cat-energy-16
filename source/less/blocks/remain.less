@@ -1,4 +1,12 @@
 .remain {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px;
+  padding-top: 79px;
+
   font-family: @primaty-font;
   font-size: 16px;
   line-height: 20px;
@@ -7,14 +15,132 @@
   text-align: center;
 }
 
+.remain::after {
+  content: '';
+
+  top:27px;
+  left: 145px;
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  background-image: url(../img/icon-plus-mobile.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .remain__show {
+  margin: 0px;
+  margin-top:2px;
+
   text-transform: uppercase;
 }
 
 .remain__description{
+  margin: 0px;
+  margin-top: 8px;
+
   font-family:@secondary-font;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   color: @grey-fontcolor;
+}
+
+.remain__button {
+  margin: 0px;
+  color:@grey-fontcolor;
+  background-color: @grey-background-color;
+}
+
+.remain__button:hover {
+  background-color: @rbt-hvr-color;
+}
+
+.remain__button:active {
+  opacity: 0.3;
+  background-color: @rbt-hvr-color;
+}
+
+@media (min-width: @tablet-width) {
+  .remain {
+    justify-content: flex-start;
+    width: 324px;
+    height: 429px;
+    margin: 0;
+    margin-top: 142px;
+    padding: 0px;
+
+    border: 1px solid @grey-border-color;
+  }
+
+  .remain__show {
+    width: 140px;
+    margin: 0px;
+    margin-top: 163px;
+    margin-left:13px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .remain__description{
+    width: 170px;
+    margin: 0px;
+    margin-top: 27px;
+    margin-left:10px;
+
+    font-size: 16px;
+  }
+
+  .remain__button {
+    margin-top: 69px;
+    margin-left: 12px;
+    width:249px;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top:13px;
+    padding-bottom: 12px;
+  }
+
+  .remain::after {
+    top:55px;
+    left: 138px;
+
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .remain {
+    justify-content: flex-start;
+    width: 245px;
+    height: 429px;
+    margin: 0;
+    margin-top: 142px;
+    padding: 0px;
+  }
+  .remain__show {
+    margin: 0 auto;
+    margin-top: 166px;
+    width: 134px;
+  }
+
+  .remain__description{
+    width: 169px;
+    margin: 0 auto;
+    margin-top: 27px;
+    font-size: 16px;
+  }
+  .remain__button {
+    margin: 0 auto;
+    margin-top: 69px;
+    width:169px;
+  }
+
+  .remain::after {
+    left: 92px;
+  }
 }

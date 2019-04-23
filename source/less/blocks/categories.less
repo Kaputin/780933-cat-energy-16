@@ -78,9 +78,29 @@
   width: 24px;
   height: 11px;
 
-  background-image: url(../../img/icon-right-arrow-long.svg);
+  background-image: url(../img/icon-right-arrow-long.svg);
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+.categories__link:hover {
+  &::before{
+    width: 33px;
+    height: 11px;
+    background-image: url(../img/icon-right-arrow-verylong.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+.categories__link:active {
+  &::before{
+    width: 33px;
+    height: 11px;
+    background-image: url(../img/icon-right-arrow-verylong.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  opacity: 0.3;
 }
 
 .categories__item--slim::after {
@@ -93,7 +113,7 @@
   width: 35px;
   height: 49px;
 
-  background-image: url(../../img/icon-cat-slim.svg);
+  background-image: url(../img/icon-cat-slim.svg);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -122,7 +142,7 @@
   width: 67px;
   height: 28px;
 
-  background-image: url(../../img/icon-cat-pro.svg);
+  background-image: url(../img/icon-cat-pro.svg);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -158,32 +178,32 @@
 
   .categories__item {
     width:708px;
-    margin-top:30px;
+    margin-top:29px;
   }
 
   .categories__title {
-    padding-top:81px;
-    padding-left: 55px;
+    padding-top:78px;
+    padding-left: 56px;
 
     font-size: 36px;
   }
 
   .categories__description {
     margin-top: 26px;
-    margin-left: 52px;
-    margin-right: 284px;
+    margin-left: 56px;
+    margin-right: 279px;
 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 24px;
   }
 
   .categories__item--pro .categories__description {
-    margin-right: 313px;
+    margin-right: 308px;
   }
 
   .categories__link {
-    margin-top: 51px;
-    margin-left: 53px;
+    margin-top: 54px;
+    margin-left: 57px;
     margin-bottom: 63px;
     padding: 0px;
 
@@ -195,7 +215,7 @@
 
   .categories__link::before {
     top: 6px;
-    left: 122px;
+    left: 127px;
   }
 
   .categories__item--slim::after {
@@ -271,7 +291,7 @@
   }
 
   .categories__link {
-    margin-top: 40px;
+    margin-top: 26px;
   }
 
   .categories__item--slim::after {
@@ -306,7 +326,7 @@
 
     width: 100px;
     height: 100px;
-    
+
     border-radius: 100px;
   }
 }

@@ -32,10 +32,10 @@
 
 .site-list a[href] {
   &:hover {
-    color: @grey-hover-color;
+    opacity: 0.6;
   }
   &:active {
-    color: @grey-active-color;
+    opacity: 0.3;
   }
 }
 
@@ -86,6 +86,7 @@
     margin-right: 40px;
     margin-left: auto;
   }
+  
   .site-list__item {
     margin-right: 35px;
     padding-top:50px;
@@ -109,7 +110,7 @@
       }
     }
   }
-  
+
   .site-list__item_index::after {
     background: @white-background-color;
   }

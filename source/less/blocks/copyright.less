@@ -5,7 +5,7 @@
   width: 280px;
   margin: 0 auto;
   padding: 20px 0px;
-  border-top: 1px solid grey;
+  border-top: 1px solid @grey-border-color;
 }
 
 .copyright__link-text {
@@ -20,14 +20,30 @@
 .copright__image {
   width: 27px;
   height: 34px;
-  fill: #444444;
+
+  fill: @fill-grey;
+}
+
+.copyright:hover {
+  .copright__image {
+    fill: @bg-site-active;
+  }
+}
+.copyright:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     width: 162px;
-    border:none;
     margin:0px;
+
+    border:none;
   }
 
+  .copyright__link-text {
+    font-family: @secondary-font;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

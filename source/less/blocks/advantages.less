@@ -56,22 +56,22 @@
   background-color: @green-background;
 }
 .advantages__item--benefit::after {
-  background-image: url(../../img/advantage-leaf@1x.png);
+  background-image: url(../img/advantage-leaf@1x.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
 .advantages__item--release::after {
-  background-image: url(../../img/advantage-powder@1x.png);
+  background-image: url(../img/advantage-powder@1x.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
 .advantages__item--replacement::after {
-  background-image: url(../../img/advantage-dining@1x.png);
+  background-image: url(../img/advantage-dining@1x.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
 .advantages__item--changes::after {
-  background-image: url(../../img/advantage-clock@1x.png);
+  background-image: url(../img/advantage-clock@1x.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -84,7 +84,7 @@
   }
 
   .advantages__title {
-    margin-top: 51px;
+    margin-top: 42px;
 
     font-size: 60px;
     line-height: 60px;
@@ -99,15 +99,17 @@
     justify-content: space-between;
 
     margin-left: 0px;
-    margin-top: 32px;
+    margin-top: 43px;
   }
 
   .advantages__item {
-    width: 245px;
+    position: relative;
+    z-index: 2;
+    width: 252px;
     height:169px;
 
     margin-top: 31px;
-    padding-top: 117px;
+    padding-top: 112px;
     padding-right: 68px;
 
     font-size: 16px;
@@ -128,6 +130,7 @@
     top:-38px;
     left: 124px;
     position: absolute;
+    z-index: -1;
 
     width: 144px;
     height: 305px;
@@ -137,9 +140,8 @@
     line-height: 281px;
     font-weight: 400;
     color: @grey-background-color;
-
-    opacity: 0.1;
   }
+
   .advantages__item--benefit::before {
     content: '1';
   }
@@ -159,11 +161,11 @@
     width: 1220px;
   }
   .advantages__title {
-    margin-top: 79px;
+    margin-top: 70px;
   }
   .advantages__list {
     margin-left: 0px;
-    margin-top: 63px;
+    margin-top: 72px;
   }
 
   .advantages__item {
