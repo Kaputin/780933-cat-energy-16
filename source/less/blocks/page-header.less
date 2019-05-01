@@ -38,9 +38,18 @@
 .page-header__logo-image:hover {
     opacity: 0.8;
   }
-  .page-header__logo-image:active {
+
+.page-header__logo-image:active {
     opacity: 0.6;
   }
+
+.page-header__logo-tablet {
+  display: none;
+}
+
+.page-header__logo-desktop {
+  display: none;
+}
 
 
 @media (min-width: @tablet-width) {
@@ -63,6 +72,18 @@
     width: 173px;
     height: 58px;
   }
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -76,10 +97,22 @@
     margin-right: 0px;
     padding-top:54px;
   }
-  
+
   .page-header__logo-image {
     margin-left: 40px;
     width: 202px;
     height: 59px;
+  }
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: block;
   }
 }
