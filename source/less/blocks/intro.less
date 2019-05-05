@@ -3,8 +3,8 @@
   display: block;
 
   width: 320px;
-  margin: 0px auto;
-  padding: 0px;
+  margin: 0 auto;
+  padding: 0;
 
   font-family: @primaty-font;
   font-size: 14px;
@@ -30,17 +30,16 @@
   background-size: contain;
 }
 
-@media
-(min-resolution: 144dpi),
-(min-resolution: 1.5dppx) {
- .main-nav_index {
-   background-image: url("../img/index-background-mobile@2x.jpg");
- }
+@media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .main-nav_index {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__title {
-  margin: 0px;
-  padding-top:29px;
+  margin: 0;
+  padding-top: 29;
 
   font-size: 36px;
   line-height: 36px;
@@ -48,7 +47,7 @@
 }
 
 .intro__slogan {
-  margin:0px;
+  margin: 0;
   margin-top: 21px;
   margin-bottom: 167px;
 
@@ -86,7 +85,7 @@
   }
 
   .intro__title {
-    padding-top:45px;
+    padding-top: 49px;
 
     font-size: 60px;
     line-height: 60px;
@@ -94,7 +93,7 @@
 
   .intro__slogan {
     margin-top: 43px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     font-size: 20px;
     line-height: 20px;
@@ -103,13 +102,13 @@
   .intro__choice-program {
     z-index: 2;
 
-    margin-top:48px;
+    margin-top: 48px;
     margin-left: 92px;
   }
 
   .intro__image {
-    top: 230px;
-    left:0px;
+    top: 248px;
+    left: 5px;
     z-index: 1;
 
     width: 708px;
@@ -121,13 +120,17 @@
   .intro {
     width: 1220px;
 
-    margin-top:-500px;
+    margin-top: -500px;
 
     background: none;
   }
 
   .intro-wrapper {
     margin-left: 85px;
+  }
+
+  .intro__title {
+    padding-top: 25px;
   }
 
   .intro__choice-program {
@@ -141,9 +144,9 @@
 
   .intro__image {
     top: -54px;
-    left:490px;
+    left: 452px;
 
-    width:552px;
+    width: 552px;
     height: 499px;
   }
 }

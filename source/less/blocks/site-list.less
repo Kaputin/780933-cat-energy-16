@@ -1,6 +1,6 @@
 .site-list {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 
   font-family: @primaty-font;
   font-size: 20px;
@@ -11,7 +11,6 @@
   text-align: center;
   list-style: none;
 }
-
 
 .site-list a {
   display: block;
@@ -34,39 +33,41 @@
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
-    .site-list {
-      margin-right: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      width: 439px;
+  .site-list {
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 439px;
+  }
+
+  .site-list__item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
     }
-    .site-list__item {
-      margin-right: 35px;
 
-      &:last-child {
-        margin-right: 0;
-    }
+    &--active {
+      position: relative;
 
-      &--active {
-        position: relative;
+      &::after {
+        content: "";
 
-        &::after {
-          content: "";
+        position: absolute;
+        right: 0;
+        bottom: 13px;
+        left: 0;
 
-          position: absolute;
-          right: 0;
-          bottom: 13px;
-          left: 0;
+        height: 2px;
 
-          height: 2px;
-
-          background: @bg-site-active;
+        background: @bg-site-active;
       }
     }
   }
@@ -75,6 +76,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
+
     background: none;
     border: none;
   }
@@ -86,27 +88,27 @@
     margin-right: 40px;
     margin-left: auto;
   }
-  
+
   .site-list__item {
     margin-right: 35px;
-    padding-top:50px;
+    padding-top: 50px;
 
-      &:last-child {
-        margin-right: 0;
+    &:last-child {
+      margin-right: 0;
     }
 
-      &--active {
-        position: relative;
+    &--active {
+      position: relative;
 
-        &::after {
-          content: "";
+      &::after {
+        content: "";
 
-          position: absolute;
-          right: 0;
-          bottom: 13px;
-          left: 0;
+        position: absolute;
+        right: 0;
+        bottom: 13px;
+        left: 0;
 
-          height: 2px;
+        height: 2px;
       }
     }
   }
