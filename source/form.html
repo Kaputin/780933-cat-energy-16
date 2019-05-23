@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -35,32 +37,136 @@
       </nav>
     </header>
 
-    <main class="page-main">
-    <!--Красные блоки-->
+    <main class="page-form">
+      <h1 class="page-form__title">Подбор программы</h1>
+      <p class="page-form__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <div class="form__wrapper-cat">
+          <fieldset class="form__fieldset form__fieldset--cat">
+            <legend class="form__title visually-hidden">Анкета кота</legend>
+            <label class="form__label" for="name-cat">
+              <span class="form__field form__field--name">Имя:*</span>
+              <input class="form__input" type="text" name="name" id="name-cat" value="" placeholder="Барсик" required></input>
+            </label>
+            <label class="form__label" for="weight-cat">
+              <span class="form__field form__field--weight">Вес (кг):*</span>
+              <input class="form__input" type="text" name="weigth" id="weight-cat" value="" placeholder="7" required></input>
+            </label>
+            <label class="form__label" for="age-cat">
+              <span class="form__field form__field--age">Возраст (лет):</span>
+              <input class="form__input" type="text" name="age" id="age-cat" value="" placeholder="7"></input>
+            </label>
+          </fieldset>
+          <div class="form__wrapper-programm">
+            <fieldset class="form__fieldset form__fieldset--programm">
+              <legend class="form__title visually-hidden">Выбор программы</legend>
+              <ul class="form__program-list">
+                <li class="form__program-item">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="program-loss" value="Похудение" checked></input>
+                  <label class="form__label form__label--radio" for="program-loss"><span class="form__field">Похудение</span></label>
+                </li>
+                <li class="form__program-item">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="program-gain" value="Набор массы"></input>
+                  <label class="form__label form__label--radio" for="program-gain"><span class="form__field">Набор массы</span></label>
+                </li>
+                <li class="form__program-item">
+                  <input class="form__radio visually-hidden" type="radio" name="program" id="program-advice" value="Не знаю"></input>
+                  <label class="form__label form__label--radio" for="program-advice"><span class="form__field">Не знаю (нужен ваш совет)</span></label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </div>
+        <div class="form__wrapper-contacts">
+          <fieldset class="form__fieldset form__fieldset--contacts">
+            <legend class="form__title form__title--contacts">Контактные данные (владельца кота)</legend>
+            <div class="form__wrapper-host">
+              <label class="form__label form__label--contacts" for="mail-host">
+                <span class="form__field form__field--email">E-mail:*</span>
+                <input class="form__input" type="email" name="mail" id="mail-host" value="" placeholder="Kuklachev@gmail.com" required></input>
+                <svg class="form__icon form__icon--email" width="17" height="13"><use xlink:href="#icon-mail"></use></svg>
+              </label>
+              <label class="form__label form__label--contacts" for="phone-host">
+                <span class="form__field form__field--phone">Телефон:*</span>
+                <input class="form__input form__input--phone" type="tel" name="phone" id="phone-host" value="" placeholder="8 (960) 900-60-90" required></input>
+                <svg class="form__icon form__icon--phone" width="20" height="20"><use xlink:href="#icon-phone"></use></svg>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__wrapper-comment">
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <legend class="form__title">Комментарий</legend>
+            <div class="form__textarea-wrapper">
+              <textarea class="form__input form__input--textarea" cols="30" rows="10" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__wrapper-additional">
+          <fieldset class="form__fieldset form__fieldset--additional">
+            <legend class="form__title">Дополнительно</legend>
+            <ul class="form__additional-list">
+              <li class="form__additional-item">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" id="additional-sweetener" checked></input>
+                <label class="form__label form__label--checkbox" for="additional-sweetener"><span class="form__field">Сахарозаменитель</span></label>
+              </li>
+              <li class="form__additional-item">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="additional-water"></input>
+                <label class="form__label form__label--checkbox" for="additional-water"><span class="form__field">Питьевая вода</span></label>
+              </li>
+              <li class="form__additional-item">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="additional-milk"></input>
+                <label class="form__label form__label--checkbox" for="additional-milk"><span class="form__field">Молоко</span></label>
+              </li>
+              <li class="form__additional-item">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="additional-vitamins"></input>
+                <label class="form__label form__label--checkbox" for="additional-vitamins"><span class="form__field">Витамины</span></label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="form__wrapper-submit">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__required">* — Обязательные поля</p>
+        </div>
+      </form>
+      <section class="cooperation">
+        <div class="cooperation__wrapper">
+        <p class="cooperation__slogan">Приглашаем <br> к сотрудничеству дилеров!</p>
+        <div class="cooperation__address-wrapper">
+          <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8</p>
+          <span class="cooperation__address cooperation__address--city">Санкт-Петербург</span>
+        </div>
+      </div>
+        <div class="cooperation__map-wrapper">
+          <h2 class="visually-hidden">Карта</h2>
+          <iframe class="cooperation__map" src="https://yandex.ru/map-widget/v1/-/CCfJqHi4" style="border:0"></iframe>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo" href="index.html">
           <svg class="page-footer__logo-image" width="128px" height="24"><use xlink:href="#logo-footer"></use></svg>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="https://vk.com/htmlacademy">
-                <svg class="social__link--vkontakte" width="22px" height="12px"><use xlink:href="#link-vkontakte"></use></svg>
+                <svg class="social__icon social__icon--vkontakte" width="22px" height="12px"><use xlink:href="#icon-vk-mobile"></use></svg>
                 <span class="visually-hidden">Мы в Вконтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.instagram.com/htmlacademy">
-                <svg class="social__link--instagram" width="16px" height="16px"><use xlink:href="#link-instagram"></use></svg>
+                <svg class="social__icon social__icon--instagram" width="16px" height="16px"><use xlink:href="#icon-insta-mobile"></use></svg>
                 <span class="visually-hidden">Мы в Инстаграме</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link " href="https://www.facebook.com/htmlacademy">
-                <svg class="social__link--facebook" width="10px" height="19px"><use xlink:href="#link-facebook"></use></svg>
+              <a class="social__link" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__icon social__icon--facebook" width="10px" height="19px"><use xlink:href="#icon-fb-mobile"></use></svg>
                 <span class="visually-hidden">Мы в Фейсбуке </span>
               </a>
             </li>
@@ -71,27 +177,13 @@
             <span class="copyright__text">HTML Academy</span>
           </a>
           <a class="copyright__link-image" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copright__image" width="27px" height="34px"><use xlink:href="#copright__image"></use></svg>
+            <svg class="copright__image" width="27px" height="34px"><use xlink:href="#icon-htmlacademy"></use></svg>
             <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
         </div>
       </div>
     </footer>
-    <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-    </script>
-    </body>
-    </html>
+    <script src="js/main-nav.js"></script>
+    <script src="js/picturefill.js"></script>
+  </body>
+</html>

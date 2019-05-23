@@ -32,14 +32,14 @@
 
 @media (min-resolution: 144dpi),
   (min-resolution: 1.5dppx) {
-  .main-nav_index {
+  .intro-wrapper {
     background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 
 .intro__title {
   margin: 0;
-  padding-top: 29;
+  padding-top: 27px;
 
   font-size: 36px;
   line-height: 36px;
@@ -48,7 +48,7 @@
 
 .intro__slogan {
   margin: 0;
-  margin-top: 21px;
+  margin-top: 25px;
   margin-bottom: 167px;
 
   text-transform: uppercase;
@@ -61,7 +61,9 @@
 }
 
 .intro__choice-program {
-  margin-top: 135px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 137px;
 }
 
 @media (min-width: @tablet-width) {
@@ -75,7 +77,7 @@
   .intro-wrapper {
     width: 430px;
     height: auto;
-    margin-left: 92px;
+    margin-left: 88px;
 
     color: @darkgrey-fontcolor;
     text-align: left;
@@ -102,13 +104,16 @@
   .intro__choice-program {
     z-index: 2;
 
-    margin-top: 48px;
-    margin-left: 92px;
+    margin-top: 45px;
+    margin-left: 88px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .intro__image {
-    top: 248px;
-    left: 5px;
+    top: 250px;
+    left: 0;
     z-index: 1;
 
     width: 708px;
@@ -118,33 +123,52 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    width: 1220px;
+    position: inherit;
+    width: 100%;
 
-    margin-top: -500px;
-
-    background: none;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, @green-background 50%, @green-background 100%);
   }
 
   .intro-wrapper {
-    margin-left: 85px;
+    width: 480px;
+    margin-left: 122px;
+  }
+
+  .intro-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 650px;
+    height: 696px;
+    margin-left: 528px;
+
+    background: @green-background;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: cover;
   }
 
   .intro__title {
-    padding-top: 25px;
+    padding-top: 100px;
   }
 
   .intro__choice-program {
-    margin-bottom: 188px;
-    margin-left: 83px;
+    margin-top: 54px;
+    margin-bottom: 190px;
+    margin-left: 122px;
   }
 
   .intro__slogan {
     margin-top: 40px;
   }
 
+  .intro__image-wrapper {
+    position: relative;
+  }
+
   .intro__image {
-    top: -54px;
-    left: 452px;
+    top: -260px;
+    left: 490px;
 
     width: 552px;
     height: 499px;
