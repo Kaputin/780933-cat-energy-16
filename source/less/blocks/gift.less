@@ -1,0 +1,115 @@
+.gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 280px;
+  height: 289px;
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 31px;
+
+  background-color: @green-background;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .gift {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+.gift__promo {
+  width: 170px;
+  margin-top: 61px;
+
+  font-family: @secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @white-fontcolor;
+  text-align: center;
+}
+
+.gift__icon {
+  width: 55px;
+  height: 60px;
+  margin-top: 65px;
+
+  fill: @white-background-color;
+}
+
+@media (min-width: @tablet-width) {
+  .gift {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 708px;
+    height: 200px;
+    margin-top: 70px;
+    margin-bottom: 73px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .gift {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  .gift__promo {
+    width: 170px;
+    margin-top: 18px;
+    margin-right: 114px;
+
+    text-align: left;
+  }
+
+  .gift__icon {
+    margin-top: -12px;
+    margin-left: 92px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    margin-top: 81px;
+    margin-left: 80px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    .gift {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+
+  .gift__promo {
+    width: 170px;
+    margin: 0;
+    margin-top: 65px;
+
+    text-align: center;
+  }
+
+  .gift__icon {
+    margin: 0;
+    margin-top: 65px;
+  }
+}
