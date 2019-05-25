@@ -111,12 +111,16 @@
   margin-top: 22px;
 }
 
+.example__image--after {
+  display: none;
+}
+
 .example__choice {
   display: flex;
   align-items: center;
 
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-bottom: 30px;
 }
 
@@ -178,7 +182,7 @@
   }
 
   .example__title {
-    margin-top: 23px;
+    margin-top: 12px;
     margin-left: 30px;
 
     font-size: 60px;
@@ -188,7 +192,7 @@
   .example__story {
     width: 700px;
     margin-left: 30px;
-    margin-top: 60px;
+    margin-top: 63px;
 
     font-size: 16px;
     line-height: 24px;
@@ -198,7 +202,7 @@
     margin: 0;
     margin-left: 30px;
     margin-right: 9px;
-    margin-top: 59px;
+    margin-top: 55px;
   }
 
   .example__result-description {
@@ -213,6 +217,7 @@
 
   .example__result-value {
     width: 162px;
+    padding-bottom: 19px;
 
     font-size: 30px;
     line-height: 37px;
@@ -236,14 +241,28 @@
     margin-bottom: 9px;
   }
 
-  .example__image {
+  .example__wrapper-img {
+    margin-top: 236px;
     position: relative;
-    z-index: 2;
+    background: linear-gradient(to right, @grey-background-color 0%, @grey-background-color 50%, @darkgrey-background-color 50%, @darkgrey-background-color 100%);
+  }
 
-    width: 677px;
-    height: 499px;
-    margin-top: 82px;
-    margin-left: 47px;
+  .example__image {
+    position: absolute;
+    top: -168px;
+    width: 683px;
+    height: 515px;
+    margin-top: 0;
+    margin-left: 49px;
+  }
+
+  .example__image--before {
+    clip: rect(auto, 336px, auto, auto);
+  }
+
+  .example__image--after {
+    display: block;
+    clip: rect(auto, auto, auto, 336px);
   }
 
   .example__choice {
@@ -251,16 +270,13 @@
     z-index: 1;
 
     width: 768px;
-    height: 462px;
-    margin-top: -349px;
+    margin-top: 0;
     margin-bottom: 0;
-
-    background: linear-gradient(to right, @grey-background-color 0%, @grey-background-color 50%, @darkgrey-background-color 50%, @darkgrey-background-color 100%);
   }
 
   .example__range {
     justify-content: center;
-    margin-top: 376px;
+    margin-top: 375px;
     width: 428px;
     height: 6px;
     border: none;
@@ -272,10 +288,10 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    left: 50.5%;
+    left: 50%;
 
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
 
     border-radius: 50%;
     border: 1px solid @toggle-border;
@@ -314,7 +330,8 @@
 
   .example__choice-button {
     margin: 0;
-    margin-top: 368px;
+    margin-top: 365px;
+    margin-bottom: 69px;
     padding: 0;
     padding-bottom: 5px;
 
@@ -347,6 +364,7 @@
   .example {
     width: @desktop-width;
     margin: 0;
+    margin-top: 46px;
     padding: 0;
 
     border-top: none;
@@ -365,8 +383,7 @@
   }
 
   .example__wrapper-text {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: flex-start;
 
     width: 610px;
@@ -374,6 +391,8 @@
 
   .example__wrapper-img {
     width: 690px;
+    margin-top: 0;
+    background: linear-gradient(to right, @grey-background-color 0%, @grey-background-color 53%, @darkgrey-background-color 53%, @darkgrey-background-color 100%);
   }
 
   .example__story {
@@ -384,8 +403,14 @@
 
   .example__result {
     margin: 0;
+    margin-top: 69px;
     margin-left: 40px;
     margin-right: 0;
+  }
+
+  .example__result--days {
+    margin-top: -94px;
+    margin-left: 244px;
   }
 
   .example__result-description {
@@ -397,6 +422,7 @@
 
   .example__result-value {
     width: 162px;
+    padding-bottom: 20px;
   }
 
   .example__expenses {
@@ -405,8 +431,9 @@
     align-items: flex-start;
 
     margin: 0;
-    margin-top: -27px;
+    margin-top: 41px;
     margin-left: 40px;
+    margin-bottom: 74px;
   }
 
   .example__expenses-title {
@@ -415,15 +442,21 @@
   }
 
   .example__image {
-    margin: 0;
-    margin-top: -173px;
+    top: -189px;
+    margin-left: 3px;
+  }
+
+  .example__image--before {
+    clip: rect(auto, 362px, auto, auto);
+  }
+
+  .example__image--after {
+    clip: rect(auto, auto, auto, 362px);
   }
 
   .example__choice {
     width: 690px;
-    margin-top: -329px;
-
-    background: linear-gradient(to right, @grey-background-color 0%, @grey-background-color 53%, @darkgrey-background-color 53%, @darkgrey-background-color 100%);
+    margin: 0;
   }
 
   .example__choice-button {
@@ -439,5 +472,9 @@
 
   .example__choice-button--after {
     margin-left: 20px;
+  }
+
+  .example__toggle {
+    left: 50.7%;
   }
 }
