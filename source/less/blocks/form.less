@@ -231,6 +231,10 @@
   }
 }
 
+.form__radio:focus + .form__label--radio::before {
+  border: 1px solid @radio-hover;
+}
+
 .form__label--radio:active {
   opacity: 0.3;
 
@@ -347,6 +351,10 @@
   &::before {
     border: 1px solid @radio-hover;
   }
+}
+
+.form__checkbox:focus + .form__label--checkbox::before {
+  border: 1px solid @radio-hover;
 }
 
 .form__label--checkbox:active {
